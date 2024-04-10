@@ -4,12 +4,16 @@
   "description": "auth_service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git remote add origin https://github.com/Goku56/Node-Layout.git"
   },
   "author": "Gokul Modi (gokulmodi369@gmail.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.4"
+  }
 }
