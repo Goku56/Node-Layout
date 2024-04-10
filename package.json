@@ -9,8 +9,10 @@
   "type": "commonjs",
   "scripts": {
     "dev": "node src/server.js",
-    "prettier:check": "prettier . --check",
-    "prettier:fix": "prettier . --write"
+    "prettier:check": "prettier . --check --ignore-path .prettierignore",
+    "prettier:fix": "prettier . --write --ignore-path .prettierignore",
+    "lint:check": "eslint . --ignore-path .eslintignore --ext .js,.jsx",
+    "lint:fix": "eslint . --fix --ignore-path .eslintignore --ext .js,.jsx"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,14 @@
   "author": "Gokul Modi (gokulmodi369@gmail.com)",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "prettier": "3.2.5",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.4",
+    "typescript-eslint": "^7.6.0"
   }
 }
