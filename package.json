@@ -2,9 +2,15 @@
   "name": "auth_service",
   "version": "1.0.0",
   "description": "auth_service",
-  "main": "index.js",
+  "main": "server.js",
+  "keywords": [
+    "project keywords"
+  ],
+  "type": "commonjs",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node src/server.js",
+    "prettier:check": "prettier . --check",
+    "prettier:fix": "prettier . --write"
   },
   "repository": {
     "type": "git",
@@ -14,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "prettier": "3.2.5",
     "typescript": "^5.4.4"
   }
 }
