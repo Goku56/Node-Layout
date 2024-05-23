@@ -5,5 +5,6 @@ function login(username: string): string {
 const logout = (data: string): string => {
   return data;
 };
+
 logout('data');
 login('gokul');

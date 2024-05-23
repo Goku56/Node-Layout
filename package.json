@@ -29,8 +29,12 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.4",
     "prettier": "3.2.5",
     "typescript": "^5.4.4",
     "typescript-eslint": "^7.6.0"
+  },
+  "lint-staged": {
+    "*.ts": ["npm run prettier:fix", "npm run lint:fix"]
   }
 }
