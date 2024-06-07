@@ -1,8 +1,15 @@
 import express from 'express';
-import { signup } from '../controllers/authController';
+import { AuthController } from '../controllers/authController';
+import { UserService } from '../services/userService';
+import { AppDataSource } from '../data-source';
+import { User } from '../entity/User';
 
 const router = express.Router();
+const userRepository = AppDataSource.getRepository(User);
+const userService = new UserService(userRepository);
+const authController = new AuthController(userService);
 
-router.post('/register', signup);
+// eslint-disable-next-line @typescript-eslint/no-misused-promises
+router.post('/register', (req, res) => authController.register(req, res));
 
 export default router;
